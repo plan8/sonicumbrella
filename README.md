@@ -2,7 +2,7 @@
 
 ##A WebVR experiment exploring spatial audio
 
-![sonicumbrella](https://github.com/plan8/sonicumbrella/raw/master/app/img/sonicumbrella.png)
+![sonicumbrella](https://github.com/plan8/sonicumbrella/raw/master/app/assets/img/sonicumbrella.png)
 
 
 In March 2017 Sonic Umbrella was released alongside other WebVR experiments by some other fantastic people as part of Google's WebVR Experiments platform.
