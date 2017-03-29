@@ -1,0 +1,49 @@
+
+@media only screen and (orientation: landscape) and (max-width: 1300px){
+
+  #landing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .splash {
+
+    //position: static;
+    .splash-head {
+      margin: auto;
+      background-image: url('../img/logo_1line@3x.png');
+      width: 564px;
+      height: 146px;
+      max-width: 74%;
+    }
+
+    .splash-subhead {
+      font-size: 100%;
+      line-height: 1.7;
+      letter-spacing: 0.06em;
+      padding-bottom: 5%;
+    }
+
+  }
+
+  .about-button img{
+    width: 30px;
+  }
+
+  .topright {
+    right: 20px;
+    top: 12px;
+  }
+
+  #about{
+    .content{
+      max-width: 80%;
+    }
+  }
+
+  .enter360{
+    width: 110px;
+    margin: 10px auto 20px auto;
+  }
+}

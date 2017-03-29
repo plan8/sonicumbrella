@@ -1,0 +1,76 @@
+/******************************************************************************
+* Larger screen (1146+)
+*******************************************************************************/
+@media only screen and (min-width: 1301px){
+
+
+  .about-button img {
+    width: 40px;
+  }
+
+  .splash{
+
+    .splash-head {
+      max-width: none;
+      margin: 70px auto 24px auto;
+      width:720px;
+      height: 160px;
+      line-height: 1;
+      letter-spacing: 0;
+      background-image: url('../img/logo_1line@3x.png');
+    }
+
+    .splash-subhead {
+      font-size: 110%;
+      line-height: 1.7;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  .headphones {
+    font-size:1.8em;
+  }
+
+  .topright {
+    top: 2vw;
+    right: 2vw;
+  }
+
+  .webvr-logo-container{
+    bottom: 1.6vw;
+  }
+  .plan8-logo-container{
+    bottom: 1.8vw;
+  }
+  .plan8-logo-container{
+    width:5.15vw;
+    right:1.8vw;
+  }
+
+  .webvr-logo-container{
+    width:8.8vw;
+    left: 2.1vw;
+  }
+
+  .webvr-ui-button {
+    height: 0;
+    margin:0;
+    margin-bottom: 40px;
+  }
+
+  #headphones{
+    p {
+      font-size: 55%;
+      line-height: 1;
+      vertical-align: middle;
+    }
+    .headphones-icon {
+      padding:0;
+      padding-right: 8px;
+      width: 30px;
+      height:auto;
+      vertical-align: text-bottom;
+    }
+  }
+
+}

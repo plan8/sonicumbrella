@@ -1,0 +1,4 @@
+AuthName "Restricted Area"
+AuthType Basic
+AuthUserFile /home/tor/passwords/umbrella01.staging.plan8.se.htpasswd
+require valid-user

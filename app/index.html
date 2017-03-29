@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sonic Umbrella</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Origin Trial Token, feature = WebVR, origin = https://sonicumbrella.com, expires = 2017-02-21 -->
+    <meta http-equiv="origin-trial" data-feature="WebVR" data-expires="2017-02-21" content="AhEz57KS/ZiTB0OYku4d5Lr8xaqtuIRAm5zGqybeStv38P/fFTX+7yMcHJizyN3RA3U91iNLdQo748QZKemoMQ4AAABjeyJvcmlnaW4iOiJodHRwczovL3NvbmljdW1icmVsbGEuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWUiIsImV4cGlyeSI6MTQ4NzY4Nzg0MCwiaXNTdWJkb21haW4iOnRydWV9">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.ico"/>
+  </head>
+  <body>
+    <div id="design"></div>
+    <div id="main">
+      <div class="close xbutton topright" id="desktop-vr-x-button"></div>
+    </div>
+    <div id="loading" class="splash-container">
+      <div class="splash loading">
+        <img id="loaderGif" alt="Loading gif" src="assets/img/loader_rain_large.gif">
+      </div>
+
+    </div>
+    <div id="landing" class="splash-container">
+      <!-- <input type="button" value="?" id="about-button" class="about-button topright"></input> -->
+      <div id="about-button" class="about-button topright">
+        <img src="assets/img/info_btn@1.png" alt="info button" class="plan8-logo">
+      </div>
+      <div class="splash">
+        <h1 class="splash-head">Sonic Umbrella</h1>
+        <div id="enter-vr-container">
+          <div id="enterVrButtonContainer"></div>
+          <!--<button type="button" id="viewInVRButton" class="vrbutton">View in VR</button>-->
+
+          <div id="headphones" class="headphones">
+            <p>
+              <img src="assets/img/headphones@3x.png" alt="headphone icon" class="headphones-icon" id="headphones-icon">Headphones Required
+            </p>
+          </div>
+        </div>
+        <div id="noVR">
+          <p>
+            This experience is made for WebVR.<br/>
+            Visit this page on your mobile or connect your HMD.
+          </p>
+        </div>
+      </div>
+    </div><!-- landing end -->
+    <div class="footer">
+      <div class="plan8-logo-container">
+        <a href="http://plan8.se/" target="_blank"><img src="assets/img/plan8_logo_100px.png" alt="Plan8 Logo" class="plan8-logo"></img></a>
+      </div>
+      <div class="webvr-logo-container">
+        <img src="assets/img/webVR_experiment@3x.png" alt="WebVR Logo" class="webvr-logo">
+      </div>
+    </div>
+    <div id="about" class="splash-container">
+      <div class="content">
+          <h1 class="about-head unselectable">About Sonic Umbrella</h1>
+          <p class="text-small">
+            What if the sky could rain anything? Stand under the umbrella to hear the sounds of raining dog toys, ping pong balls, and more.
+            This experiment uses WebVR and the Web Audio API to place objects and sound effects in 3D space.
+            You’ll hear objects crashing not just to your left and right, but above you, below you, in front of you, and behind you.
+          </p>
+          <p class='about-check-out'>The open-source code is available <a href="#">here</a>, and check out more <a href="https://experiments.vr">WebVR Experiments here.</a></p>
+          <p class="text-small">Built by Plan8.</p>
+          <div class="close xbutton topright" id="about-xbutton"></div>
+          <!-- <input type="button" id="about-xbutton" class="xbutton"></input> -->
+      </div>
+      <div class="footer">
+        <div class="plan8-logo-container">
+          <a href="http://plan8.se/" target="_blank"><img src="assets/img/plan8_logo_100px.png" alt="Plan8 Logo" class="plan8-logo"></img></a>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/build/umbrella.js"></script>
+  </body>
+</html>

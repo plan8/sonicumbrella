@@ -1,0 +1,341 @@
+/******************************************************************************
+* Base / Small screen
+*******************************************************************************/
+* {
+  box-sizing: border-box;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+a, a:visited, a:active{
+  color:#1e73ac;
+  text-decoration: none;
+}
+
+html, body{
+  font-size: 16px;
+  color: white;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  margin: 0px;
+  padding: 0;
+  overflow: hidden;
+  font-size: 100%;
+  font-family: 'Quicksand', sans-serif;
+}
+
+button{
+  color:white;
+}
+
+.webvr-button{
+  display: none!important;
+}
+
+#loading {
+  text-align:center;
+  top:0;left:0;right:0;bottom:0;
+  position:fixed;
+  background-color: black;
+  z-index: 1000;
+  font-size: 30px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.splash{
+  position: fixed;
+  top:50%; left:50%;
+  transform: translate(-50%,-50%);
+}
+#landing {
+  top:0px;
+  z-index: 999;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+}
+
+#about {
+  background-color: black;
+  text-align:center;
+  top:0px;
+  z-index: 1000;
+  visibility: hidden;
+}
+
+#desktop-vr-x-button {
+  display:none;
+}
+
+.splash-container {
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: fixed !important;
+}
+
+.splash {
+  width: 100vw;
+  text-align: center;
+}
+
+.about-head {
+  text-align:left;
+  font-weight: 100;
+  margin: 0px;
+}
+
+.text-small {
+  letter-spacing: 0;
+  line-height: 160%;
+  text-align: justify;;
+}
+
+.about-check-out {
+  text-align: left;
+}
+
+.headphones {
+  font-size: 1em;
+  letter-spacing: 0.05em;
+}
+
+.headphones-icon {
+  width: 25px;
+  height:auto;
+  padding-right: 10px;
+  vertical-align: text-top;
+}
+
+.plan8-logo {
+  width:100px;
+}
+
+.vrbutton {
+  background-color: #505050;
+  border: none;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.xbutton {
+  font-size: 20px;
+  border: none;
+  position:fixed;
+  top:20px;
+  right:20px;
+}
+
+
+
+
+.about-line {
+  float:left;
+  width:20%;
+}
+
+.footer {
+  position:absolute;
+  bottom: 0px;
+  width:100%;
+  z-index:1000;
+}
+
+.plan8-logo-container, .webvr-logo-container{
+  position: fixed;
+  bottom: 20px;
+  text-align: right;
+
+  img{
+    width:100%;
+  }
+}
+
+
+.rwd-line {
+  display: block;
+}
+@media screen and (min-width: 500px){
+  .rwd-line { display: inline; }
+}
+
+.close {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #FFF;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.loading{
+  top:45vh;
+}
+
+#loaderGif{
+  width: 64px;
+  height:auto;
+  position: fixed;
+  top:50%;
+  left:50%;
+  opacity: 0;
+  transform: translate(-50%,-50%);
+  transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+}
+
+#loaderGif.visible{
+  opacity: 1;
+}
+
+#noVR {
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%, -50%);
+  width:100%;
+  font-size: 1.2em;
+  line-height: 150%;
+}
+
+#about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .content{
+    margin-top: -13.4vh;
+    max-width: 50%;
+  }
+}
+
+.webvr-ui-button{
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.about-button {
+  z-index: 1000;
+  padding:1px;
+  position:fixed;
+
+  img {
+    width: 30px;
+  }
+}
+
+.splash{
+
+  .splash-head {
+    margin: -25% auto 0 auto;
+    text-indent: -9999px;
+    width: 320px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 222px;
+    background-image: url('../img/logo_2lines@3x.png');
+    background-size: 100%;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    max-width: 80%;
+  }
+
+  .splash-subhead {
+    font-size: 110%;
+    line-height: 1.7;
+    letter-spacing: 0.06em;
+  }
+
+}
+
+.headphones {
+  font-size:0.8em;
+}
+
+.topright {
+  top:2.1vh;
+  right:3.9vw;
+}
+
+.plan8-logo-container, .webvr-logo-container{
+  bottom: 10px;
+}
+
+.plan8-logo-container{
+  width:50px;
+  right:15px;
+}
+
+.webvr-logo-container{
+  width:100px;
+  left: 15px;
+}
+
+#headphones{
+  p {
+    font-size: 80%;
+    line-height: 1;
+    margin: 0;
+    vertical-align: middle;
+  }
+  .headphones-icon {
+    padding:0;
+    padding-right: 8px;
+    width: 20px;
+    height:auto;
+    vertical-align: text-bottom;
+  }
+}
+
+button.webvr-ui-button{
+  border-color: white;
+  color:white;
+}
+
+.enter360{
+
+  display: block;
+
+  background-image: url('../img/try_it_in_360@3x.png');
+  width: 120px;
+  height: 20px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: auto auto 20px auto;
+}
+
+#enter-vr-container {
+  width:100%;
+}
