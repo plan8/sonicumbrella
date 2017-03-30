@@ -1,4 +1,4 @@
-#[Sonic Umbrella](https://sonicumbrella.com)
+# [Sonic Umbrella](https://sonicumbrella.com)
 
 ##A WebVR experiment exploring spatial audio
 
