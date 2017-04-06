@@ -1,15 +1,18 @@
 var ua = navigator.userAgent;
-var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua)
+var isMobileOrTablet = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
 var isAndroid = /Android/i.test(ua);
 var isIOS    = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
 var hasTouch = ('ontouchstart' in window);
 var isChrome = /Chrome/.test(ua) && /Google Inc/.test(navigator.vendor);
 //var isSafari = ua.match(/AppleWebKit/); //also matched webview based ios applications like Chrome
-
+var isMobile = isMobileOrTablet && ( ( isAndroid && /Mobile Safari/i.test(ua) ) || ( isIOS && /iPhone/i.test(ua) ) );
+var isTablet = isMobileOrTablet && !isMobile;
+console.log('isTablet',isTablet,isMobile)
 module.exports = {
 
     hasTouch  : hasTouch,
     isMobile  : isMobile,
+    isTablet  : isTablet,
     isDesktop : !isMobile,
     isAndroid : isAndroid,
     isChrome  : isChrome,
