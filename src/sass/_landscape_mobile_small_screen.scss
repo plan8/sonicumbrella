@@ -1,0 +1,15 @@
+
+@media only screen and (orientation: landscape) and (max-height: 340px){
+
+  #about{
+    align-items: baseline;
+    .content{
+      margin-top: 30px;
+      font-size: 85%;
+    }
+  }
+
+  .splash .splash-head {
+    height: 110px;
+  }
+}
