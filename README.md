@@ -5,7 +5,8 @@
 ![sonicumbrella](https://github.com/plan8/sonicumbrella/raw/master/app/assets/img/sonicumbrella.png)
 
 
-In March 2017 Sonic Umbrella was released alongside other WebVR experiments by some other fantastic people as part of Google's WebVR Experiments platform.
+In April 2017 Sonic Umbrella was released alongside other WebVR experiments by some other fantastic people as part of Google's WebVR Experiments platform.
+
 ## MIT License
 
 Copyright © 2017 Plan8 Production
