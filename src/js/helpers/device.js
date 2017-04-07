@@ -7,7 +7,7 @@ var isChrome = /Chrome/.test(ua) && /Google Inc/.test(navigator.vendor);
 //var isSafari = ua.match(/AppleWebKit/); //also matched webview based ios applications like Chrome
 var isMobile = isMobileOrTablet && ( ( isAndroid && /Mobile Safari/i.test(ua) ) || ( isIOS && /iPhone/i.test(ua) ) );
 var isTablet = isMobileOrTablet && !isMobile;
-console.log('isTablet',isTablet,isMobile)
+
 module.exports = {
 
     hasTouch  : hasTouch,
