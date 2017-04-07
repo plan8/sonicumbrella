@@ -268,7 +268,7 @@ var mainScene = VRScene.create({
       }.bind(this), false );
 
     } else {
-      document.addEventListener('touchstart', function() {
+      document.addEventListener(device.isAndroid ? 'click' : 'touchstart', function() {
         umbrella.toggle();
         this.deinitGaze();
       }.bind(this));
@@ -408,8 +408,8 @@ var mainScene = VRScene.create({
         umbrellaToggleButton.removeFromScene();
       }else if (device.isMobile && !webvrCheck.hasController()) {
         // cardboard without gazebutton restarts when clicking anywhere
-        document.addEventListener('touchstart', onCardboardRestart = function() {
-          document.removeEventListener('touchstart', onCardboardRestart);
+        document.addEventListener(device.isAndroid ? 'click' : 'touchstart', onCardboardRestart = function() {
+          document.removeEventListener(device.isAndroid ? 'click' : 'touchstart', onCardboardRestart);
           events.dispatchEvent({ type: events.RESTART_EXPERIENCE });
         }.bind(this));
       }else if (!device.isMobile && globalVars.is360) {
