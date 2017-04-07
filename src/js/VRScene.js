@@ -37,6 +37,10 @@ VRScene.prototype = Object.assign( Object.create( Scene.prototype ), {
             corners: 'square'
       });
 
+      if (device.isTablet) {
+        enterVR.disable();
+      }
+
       var enter360 = document.createElement('a');
       enter360.href="#";
       enter360.addEventListener('click', function(){
