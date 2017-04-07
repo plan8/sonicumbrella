@@ -17,7 +17,9 @@ var customOpts = {
   debug: true
 };
 var opts = assign({}, watchify.args, customOpts);
-var b = watchify(browserify(opts));
+
+
+var b = process.argv[2] === 'build' ? browserify(opts) : watchify(browserify(opts));
 
 b.transform( stringify, {
   appliesTo: { includeExtensions: ['.template', '.html', '.vert', '.frag' ] }
