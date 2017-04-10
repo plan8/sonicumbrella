@@ -34,6 +34,6 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0",
-    "webvr-polyfill": "^0.9.25"
+    "webvr-polyfill": "git+https://github.com/googlevr/webvr-polyfill.git"
   }
 }
