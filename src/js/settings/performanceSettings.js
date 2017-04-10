@@ -39,11 +39,26 @@ var performanceSettings = {
     maxSplatParticles: 500,
     numberOfImpactCircles: 30,
     particlesPerSplat: 0
+  },
+  ultra_low: {
+    soundPoolSize:2,
+    soundPoolPanners:5,
+    soundPoolUseSharedPanners: false,
+    soundPoolMinTimeBetweenSounds: 0.0,
+    soundPoolSwitchToEqualPowerThreshold: 0,
+    useQuadroAmbience: false,
+    numberOfRainObjects: 20,
+    maxSplatParticles: 500,
+    numberOfImpactCircles: 15,
+    particlesPerSplat: 0
   }
 }
 
 var settingsToUse;
-if ( device.isMobile ) {
+
+if (device.isNexus6) {
+  settingsToUse = performanceSettings.ultra_low;
+} else if ( device.isMobile ) {
   settingsToUse = performanceSettings.low;
 } else {
   settingsToUse = performanceSettings.standard;

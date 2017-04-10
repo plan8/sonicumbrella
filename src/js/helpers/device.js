@@ -4,6 +4,7 @@ var isAndroid = /Android/i.test(ua);
 var isIOS    = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
 var hasTouch = ('ontouchstart' in window);
 var isChrome = /Chrome/.test(ua) && /Google Inc/.test(navigator.vendor);
+var isNexus6 = ua.indexOf('Nexus 6P') > -1;
 //var isSafari = ua.match(/AppleWebKit/); //also matched webview based ios applications like Chrome
 var isMobile = isMobileOrTablet && ( ( isAndroid && /Mobile Safari/i.test(ua) ) || ( isIOS && /iPhone/i.test(ua) ) );
 var isTablet = isMobileOrTablet && !isMobile;
@@ -17,6 +18,7 @@ module.exports = {
     isAndroid : isAndroid,
     isChrome  : isChrome,
     isIOS     : isIOS,
+    isNexus6  : isNexus6,
     //isSafari  : isSafari,
 
     browser: function() {
