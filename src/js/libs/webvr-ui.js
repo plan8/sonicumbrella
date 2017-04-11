@@ -772,11 +772,7 @@ var EnterVRButton = function (_EventEmitter) {
     options.onRequestStateChange = options.onRequestStateChange || function () {
       return true;
     };
-    options.beforeEnter = options.beforeEnter || function () {
-      return new Promise(function (resolve) {
-        return resolve();
-      });
-    };
+    options.beforeEnter = options.beforeEnter || undefined;
     options.beforeExit = options.beforeExit || function () {
       return new Promise(function (resolve) {
         return resolve();
@@ -946,9 +942,13 @@ var EnterVRButton = function (_EventEmitter) {
 
       return new Promise(function (resolve, reject) {
         if (_this2.options.onRequestStateChange(_states2.default.PRESENTING)) {
-          return _this2.options.beforeEnter().then(function () {
-            return _this2.manager.enterVR(_this2.manager.defaultDisplay, _this2.sourceCanvas);
-          }).then(resolve);
+          if (_this2.options.beforeEnter) {
+            return _this2.options.beforeEnter().then(function () {
+              return _this2.manager.enterVR(_this2.manager.defaultDisplay, _this2.sourceCanvas);
+            }).then(resolve);
+          } else {
+            return _this2.manager.enterVR(_this2.manager.defaultDisplay, _this2.sourceCanvas).then(resolve);
+          }
         } else {
           reject(new Error(_states2.default.ERROR_REQUEST_STATE_CHANGE_REJECTED));
         }
@@ -994,9 +994,13 @@ var EnterVRButton = function (_EventEmitter) {
 
       return new Promise(function (resolve, reject) {
         if (_this4.options.onRequestStateChange(_states2.default.PRESENTING_FULLSCREEN)) {
-          return _this4.options.beforeEnter().then(function () {
-            return _this4.manager.enterFullscreen(_this4.sourceCanvas);
-          }).then(resolve);
+          if (_this4.options.beforeEnter) {
+            return _this4.options.beforeEnter().then(function () {
+              return _this4.manager.enterFullscreen(_this4.sourceCanvas);
+            }).then(resolve);
+          } else {
+            return _this4.manager.enterFullscreen(_this4.sourceCanvas).then(resolve);
+          }
         } else {
           reject(new Error(_states2.default.ERROR_REQUEST_STATE_CHANGE_REJECTED));
         }
