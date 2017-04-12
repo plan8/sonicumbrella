@@ -4,7 +4,6 @@
 
 var ThreeObj              = require('../ThreeObj');
 var events                = require('../helpers/events')
-var dat                   = require('dat-gui');
 var rateLimitedListener   = require('../audio/rateLimitedListener');
 var rainAutomation        = require('./rainAutomation');
 var TWEEN                 = require('tween.js/src/Tween.js');

@@ -20,7 +20,9 @@ module.exports = {
         args.unshift(id);
         console.log.apply(console, args);
     },
-    log: function (s) {
-      console.log(s);
+
+    log: function () {
+      console.log.apply( console, arguments );
     }
+
 };

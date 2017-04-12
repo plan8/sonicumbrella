@@ -146,9 +146,6 @@ var rainCloud = ThreeObj.create({
 
       rainAutomation.addEventListener( 'SOUND_PACK_CHANGE', this.onSoundPackChanged.bind(this));
 
-      globalSettings.gui.add(settings, 'splatRings');
-      globalSettings.gui.add(settings, 'splatParticles');
-
       this.setupIntro();
 
       return this;

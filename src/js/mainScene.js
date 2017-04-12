@@ -218,6 +218,7 @@ var mainScene = VRScene.create({
 
   startExperience: function(){
 
+
     if (device.isMobile) {
       document.getElementsByClassName('plan8-logo-container')[0].style.display = 'none';
       document.getElementsByClassName('webvr-logo-container')[0].style.display = 'none';
@@ -279,6 +280,8 @@ var mainScene = VRScene.create({
     }
 
     rain.startExperience();
+
+    this.endExperience()
   },
 
   initGaze: function(){

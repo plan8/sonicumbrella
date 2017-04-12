@@ -1,4 +1,3 @@
-var dat   = require('dat-gui');
 var THREE = require('three');
 
 var settings = Object.assign({
@@ -24,22 +23,4 @@ var settings = Object.assign({
 }, THREE.EventDispatcher.prototype);
 
 
-var gui = new dat.GUI();
-gui.add( settings, 'timeScale', -10, 10 ).onChange(function( value ){
-  settings.set( 'timeScale', value );
-});
-
-gui.add( settings, 'pause' );
-gui.close();
-
-var windSettings = { windX: 0, windZ: 0 };
-gui.add( windSettings, 'windX', -0.1, 0.1 ).onChange(function( val ){
-  settings.wind.x = val;
-});
-gui.add( windSettings, 'windZ', -0.1, 0.1 ).onChange(function( val ){
-  settings.wind.z = val;
-});
-
-settings.gui = gui;
-dat.GUI.toggleHide();
 module.exports = settings;
