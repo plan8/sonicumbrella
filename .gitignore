@@ -6,3 +6,5 @@ app/assets/js/build/*
 app/assets/css/*
 app/build/*
 /deploy.sh
+
+/app/assets/.htaccess
