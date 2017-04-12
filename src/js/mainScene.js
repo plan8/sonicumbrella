@@ -176,6 +176,11 @@ var mainScene = VRScene.create({
 
   restartExperience: function(){
 
+    ga('send', 'event', {
+      eventCategory: 'InGame',
+      eventAction: 'RestartExperience'
+    });
+
     var scene = this.$scene;
     var reticle = this.reticle;
     cameraRig.restartExperience();
@@ -218,11 +223,17 @@ var mainScene = VRScene.create({
 
   startExperience: function(){
 
-
     if (device.isMobile) {
       document.getElementsByClassName('plan8-logo-container')[0].style.display = 'none';
       document.getElementsByClassName('webvr-logo-container')[0].style.display = 'none';
     }
+
+    ga('send', 'event', {
+      eventCategory: 'InGame',
+      eventAction: 'StartExperience',
+      eventLabel: this.vrButton.state === 'error-no-presentable-displays' ? '360' : this.vrButton.state
+    });
+
 
     floor.setup( this.$scene );
 
@@ -391,6 +402,11 @@ var mainScene = VRScene.create({
 
   endExperience: function(){
     var scene = this.$scene;
+
+    ga('send', 'event', {
+      eventCategory: 'InGame',
+      eventAction: 'EndExperience'
+    });
 
     cameraRig.endExperience();
 

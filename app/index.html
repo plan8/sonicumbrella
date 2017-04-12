@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--
+    MIT License
+
+    Copyright (c) 2017 Plan8 Productions
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+    -->
+
     <title>Sonic Umbrella</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
@@ -13,6 +37,30 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <link rel="shortcut icon" type="image/png" href="assets/img/favicon.ico"/>
+
+    <!-- google analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-93854710-1', 'auto');
+      ga('send', 'pageview');
+
+      if ( navigator.getVRDisplays ){
+        navigator.getVRDisplays().then(function(displays) {
+            ga('send', 'event', {
+                eventCategory: 'WebVR',
+                eventAction: 'HeadsetAvailible',
+                eventLabel: (displays.length > 0 && displays[0].displayName.indexOf('polyfill') === -1 ? displays[0].displayName : 'None'),
+                eventValue: displays.length
+            });
+        });
+      }
+
+    </script>
+
   </head>
   <body>
     <div id="design"></div>
@@ -26,7 +74,7 @@
 
     </div>
     <div id="landing" class="splash-container">
-      <!-- <input type="button" value="?" id="about-button" class="about-button topright"></input> -->
+
       <div id="about-button" class="about-button topright">
         <img src="assets/img/info_btn@1.png" alt="info button" class="plan8-logo">
       </div>
@@ -55,7 +103,7 @@
         <a href="http://plan8.se/" target="_blank"><img src="assets/img/plan8_white_horiz_110px.png" alt="Plan8 Logo" class="plan8-logo"></img></a>
       </div>
       <div class="webvr-logo-container">
-        <img src="assets/img/webVR_experiment@3x.png" alt="WebVR Logo" class="webvr-logo">
+        <a href="https://g.co/webvrexp" target="_blank"><img src="assets/img/webVR_experiment@3x.png" alt="WebVR Logo" class="webvr-logo"></a>
       </div>
     </div>
     <div id="about" class="splash-container">

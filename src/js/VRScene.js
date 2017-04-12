@@ -6,13 +6,6 @@ var VRControl           = require('three/examples/js/controls/VRControls');
 var util                = require('./util');
 var FLY_CAM             = !!util.getParameterByName('fly');
 
-// var Stats = require('./libs/three/stats');
-//
-// var stats = new Stats();
-// stats.showPanel( 1 ); // 0: fps, 1: ms, 2: mb, 3+: custom
-// document.body.appendChild( stats.dom );
-
-
 require('three/examples/js/controls/FlyControls');
 
 function VRScene() {
@@ -37,9 +30,19 @@ VRScene.prototype = Object.assign( Object.create( Scene.prototype ), {
             corners: 'square'
       });
 
+
+
       if (device.isTablet) {
         enterVR.disable();
       }
+
+      enterVR.domElement.addEventListener( 'click', function(){
+        ga('send', 'event', {
+          eventCategory: 'InGame',
+          eventAction: 'EnterVR'
+        });
+      }, false );
+
 
       var enter360 = document.createElement('a');
       enter360.href="#";
