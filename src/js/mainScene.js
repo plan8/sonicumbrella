@@ -281,7 +281,6 @@ var mainScene = VRScene.create({
 
     rain.startExperience();
 
-    this.endExperience()
   },
 
   initGaze: function(){
