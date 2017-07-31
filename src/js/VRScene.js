@@ -6,6 +6,8 @@ var VRControl           = require('three/examples/js/controls/VRControls');
 var util                = require('./util');
 var FLY_CAM             = !!util.getParameterByName('fly');
 
+var FORCE_VR_ENABLE = !!util.getParameterByName('oculus');
+
 require('three/examples/js/controls/FlyControls');
 
 function VRScene() {
@@ -32,7 +34,7 @@ VRScene.prototype = Object.assign( Object.create( Scene.prototype ), {
 
 
 
-      if (device.isTablet) {
+      if (!FORCE_VR_ENABLE && device.isTablet) {
         enterVR.disable();
       }
 
