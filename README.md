@@ -40,7 +40,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ### Contributors
 
-- [Rikard Lindström](https://github.com/rikardjh)
+- [Rikard Lindström](https://github.com/rikard-io)
 - [Andreas Jeppsson](https://github.com/andreas-plan8)
 - [Oscar Tillman](https://github.com/OscarTillman)
 - [Tor Castenson](https://github.com/torstah)
